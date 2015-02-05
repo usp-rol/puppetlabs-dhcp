@@ -76,6 +76,7 @@ class dhcp (
   }
 
   file { $dhcp_dir:
+    ensure  => present,
     mode    => '0755',
     require => Package[$packagename],
   }
